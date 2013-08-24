@@ -10,7 +10,12 @@
 		"url": "https://github.com/tmont/xbmc-http.git"
 	},
 
-	"dependencies": {},
+	"bin": "./bin/xbmc-http.js",
+
+	"dependencies": {
+		"commander": "2.0.0",
+		"cli-table": "0.2.0"
+	},
 
 	"devDependencies": {
 		"mocha": "1.12.0",

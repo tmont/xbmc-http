@@ -1,13 +1,22 @@
-var http = require('http');
+var http = require('http'),
+	url = require('url');
 
-function XbmcApi(url) {
-	this.url = url.replace(/\/+$/, '');
+function XbmcApi(jsonrpcUrl) {
+	this.url = url.parse(jsonrpcUrl);
 }
 
 XbmcApi.prototype = {
 	rpc: function(ns, method, params, callback) {
-		var url = this.url;
-		var req = http.request(url, function(res) {
+		var options = {
+			hostname: this.url.hostname,
+			port: this.url.port,
+			path: this.url.path,
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		};
+		var req = http.request(options, function(res) {
 			if (res.statusCode !== 200) {
 				callback && callback({ message: 'Unexpected status code', response: res });
 				return;
