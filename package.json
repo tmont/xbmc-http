@@ -1,13 +1,13 @@
 {
-	"name": "xbmc-control",
+	"name": "xbmc-http",
 	"version": "0.0.1",
-	"description": "",
-	"keywords": [],
+	"description": "Library for interacting with XBMC's JSON-RPC API over HTTP POST",
+	"keywords": [ "xbmc", "rpc", "http" ],
 
 	"author": "Tommy Montgomery <tmont@tmont.com> (http://tmont.com/)",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/tmont/xbmc-control.git"
+		"url": "https://github.com/tmont/xbmc-http.git"
 	},
 
 	"dependencies": {},
