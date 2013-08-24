@@ -1,0 +1,19 @@
+{
+	"name": "xbmc-control",
+	"version": "0.0.1",
+	"description": "",
+	"keywords": [],
+
+	"author": "Tommy Montgomery <tmont@tmont.com> (http://tmont.com/)",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tmont/xbmc-control.git"
+	},
+
+	"dependencies": {},
+
+	"devDependencies": {
+		"mocha": "1.12.0",
+		"should": "1.2.2"
+	}
+}
